@@ -45,14 +45,18 @@ h2 {
     margin: auto;
 }
 
-/* Pixel Letter & Question Mark (Clickable) */
-.pixel-letter, .pixel-question-mark {
+/* Pixel Letter & Book (Clickable) */
+.pixel-letter, .pixel-book {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
     cursor: pointer;
     margin: 20px;
 }
 
-.pixel-letter img, .pixel-question-mark img {
+.pixel-letter img, .pixel-book img {
     width: 100%;
     height: 100%;
 }
@@ -80,9 +84,4 @@ button {
 
 button:hover {
     background-color: #ff69b4;
-}
-
-/* Hidden class */
-.hidden {
-    display: none;
 }

@@ -7,11 +7,11 @@ function hideLetter() {
 }
 
 function showQuiz() {
-    document.getElementById("quizSection").classList.remove("hidden");
+    document.getElementById("quizSection").style.display = "block";
 }
 
 function hideQuiz() {
-    document.getElementById("quizSection").classList.add("hidden");
+    document.getElementById("quizSection").style.display = "none";
 }
 
 function checkAnswer(question, answer) {

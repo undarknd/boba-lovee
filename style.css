@@ -1,0 +1,166 @@
+/* Background */
+body {
+    background-image: url('http://dl6.glitter-graphics.net/pub/3488/3488686sbj7faakxy.gif'); 
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-color: #ffd1dc; /* Soft pink in case image doesn't load */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff69b4; /* Cute pink text */
+    text-align: center;
+}
+
+/* Banner at the top */
+.banner {
+    background-image: url('http://dl2.glitter-graphics.net/pub/417/417272mey8pz5lfi.gif'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 435px;
+    height: 75px;
+    margin: auto;
+    margin-top: 10px; /* Adds spacing from the top */
+}
+
+/* Title */
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #ffb6c1; /* Soft pink shadow */
+}
+
+/* Rainbow Text Effect */
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.rainbow-text {
+    background-image: linear-gradient(to right, #ff69b4, #ff1493, #ff6347, #ff4500, #ffb6c1);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    animation: rainbow 4s linear infinite;
+}
+
+/* Letter Styling */
+.letter {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px pink;
+    width: 60%;
+    margin: auto;
+}
+
+/* Pixel Letter & Question Mark (Clickable) */
+.pixel-letter, .pixel-question-mark {
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.pixel-letter img {
+    width: 46px;
+    height: 40px;
+}
+
+.pixel-question-mark img {
+    width: 29px;
+    height: 45px;
+}
+
+/* Quiz Section */
+.quiz {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px pink;
+    width: 60%;
+    margin: auto;
+}
+
+/* Buttons */
+button {
+    background-color: #ffb6c1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ff69b4;
+}
+
+/* Floating Hearts */
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+#hearts {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    font-size: 24px;
+    color: pink;
+    animation: float 3s ease-in forwards;
+    pointer-events: none;
+}
+
+.heart:nth-child(odd) {
+    color: #ff69b4; /* Pink hearts */
+}
+
+.heart:nth-child(even) {
+    color: #ff1493; /* Darker pink hearts */
+}
+
+/* Confetti */
+@keyframes confetti {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 999;
+    pointer-events: none;
+    animation: confetti 1s ease-in-out infinite;
+    opacity: 0;
+}
+
+.confetti span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff69b4;
+    animation: confetti 1s linear infinite;
+}

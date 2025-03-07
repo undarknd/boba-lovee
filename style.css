@@ -45,19 +45,16 @@ h2 {
     margin: auto;
 }
 
-/* Pixel Letter & Book (Clickable) */
-.pixel-letter {
-    width: 80px;
-    height: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
+/* Pixel Letter & Question Mark (Clickable) */
+.pixel-letter, .pixel-question-mark {
     display: inline-block;
     cursor: pointer;
     margin: 20px;
 }
 
-.pixel-letter {
-    background-image: url('letter-pixel.png'); /* Make sure this is uploaded */
+.pixel-letter img, .pixel-question-mark img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Quiz Section */

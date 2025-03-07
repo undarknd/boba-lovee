@@ -28,19 +28,10 @@ h1 {
     text-shadow: 2px 2px 5px #ffb6c1; /* Soft pink shadow */
 }
 
-/* Rainbow Text Effect */
-@keyframes rainbow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.rainbow-text {
-    background-image: linear-gradient(to right, #ff69b4, #ff1493, #ff6347, #ff4500, #ffb6c1);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    animation: rainbow 4s linear infinite;
+/* Subtitle */
+h2 {
+    font-size: 28px;
+    text-shadow: 1px 1px 4px #ffb6c1;
 }
 
 /* Letter Styling */
@@ -54,21 +45,19 @@ h1 {
     margin: auto;
 }
 
-/* Pixel Letter & Question Mark (Clickable) */
-.pixel-letter, .pixel-question-mark {
+/* Pixel Letter & Book (Clickable) */
+.pixel-letter {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
     cursor: pointer;
     margin: 20px;
 }
 
-.pixel-letter img {
-    width: 46px;
-    height: 40px;
-}
-
-.pixel-question-mark img {
-    width: 29px;
-    height: 45px;
+.pixel-letter {
+    background-image: url('letter-pixel.png'); /* Make sure this is uploaded */
 }
 
 /* Quiz Section */
@@ -96,71 +85,7 @@ button:hover {
     background-color: #ff69b4;
 }
 
-/* Floating Hearts */
-@keyframes float {
-    0% {
-        transform: translateY(0) scale(0.5);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-200px) scale(1.5);
-        opacity: 0;
-    }
-}
-
-#hearts {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1000;
-}
-
-.heart {
-    position: absolute;
-    bottom: 0;
-    font-size: 24px;
-    color: pink;
-    animation: float 3s ease-in forwards;
-    pointer-events: none;
-}
-
-.heart:nth-child(odd) {
-    color: #ff69b4; /* Pink hearts */
-}
-
-.heart:nth-child(even) {
-    color: #ff1493; /* Darker pink hearts */
-}
-
-/* Confetti */
-@keyframes confetti {
-    0% {
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: rotate(720deg);
-        opacity: 0;
-    }
-}
-
-.confetti {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    z-index: 999;
-    pointer-events: none;
-    animation: confetti 1s ease-in-out infinite;
-    opacity: 0;
-}
-
-.confetti span {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ff69b4;
-    animation: confetti 1s linear infinite;
+/* Hidden class */
+.hidden {
+    display: none;
 }

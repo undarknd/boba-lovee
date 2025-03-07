@@ -12,121 +12,47 @@
     <div class="banner"></div>
 
     <!-- Main Title -->
-    <h1 class="rainbow-text">My dearest boba tea! 🧋💕</h1>
+    <h1>My dearest boba tea! 🧋💕</h1>
     <h2>YOUUU ARE MY UNIIVERSEEEE 💗</h2>
     <p>Just wanted to tell you how much I lOOOve YOUU! 💖</p>
 
-    <!-- Clickable Letter to Open Love Note (Using Animated GIF) -->
-    <div class="pixel-letter" onclick="showLetter()">
-        <img src="http://dl9.glitter-graphics.net/pub/536/536379ct59sbi3yr.gif" width="46" height="40" alt="Love Letter">
-    </div>
+    <!-- Clickable Letter to Open Love Note -->
+    <div class="pixel-letter" onclick="showLetter()"></div>
 
     <!-- Love Letter (Initially Hidden) -->
-    <div id="letterPopup" class="letter">
+    <div id="letter" class="letter">
         <p>
-            Dear bobo,  
+            Dear bobo,
             <br><br>
-            I just wanted to say that I love you and appreciate everything you do 🩷 You work so hard for me always and give me the best. 
-            You’re the prettiest and bestest bobo ever and I’m so lucky and grateful to have such a loving husband by my side💗  
-            You mean every thing to me. You mean the whole world and more. You are my moon and sun and solar system and every thing combined.  
-            My life is better when I’m with you and I enjoy every day of my life when I’m with you. You make me so happy,  
-            and I would be one sad boba tea 🧋 without you.  
-            <br><br>
-            **I LOVE YOU SOOOOOOO MUUUUCHH!!** 💖
+            I just wanted to say that I love you so much 💖
         </p>
         <button onclick="hideLetter()">Close</button>
     </div>
 
-    <!-- Clickable Question Mark for Quiz -->
-    <div class="pixel-question-mark" onclick="showQuiz()">
-        <img src="http://dl5.glitter-graphics.net/pub/1132/1132735gc04wawhhy.gif" width="29" height="45" alt="Question Mark">
-    </div>
+    <!-- Clickable Question Mark GIF for the Quiz -->
+    <img src="http://dl5.glitter-graphics.net/pub/1132/1132735gc04wawhhy.gif" alt="Question Mark" width="29" height="45" onclick="showQuiz()">
 
     <!-- Quiz Section (Initially Hidden) -->
     <div id="quizSection" class="quiz hidden">
         <p>Now enjoy some quizzes with me :3</p>
 
         <h3>1) What song do we both lOoooVEEee?</h3>
-        <button onclick="checkAnswer(this, 'A')">A) Ma meilleure ennemie - Stromae ft Pomme</button>
-        <button onclick="checkAnswer(this, 'B')">B) All about that bass - Meghan Trainor</button>
-        <button onclick="checkAnswer(this, 'C')">C) One call away - Charlie Puth</button>
-        <p class="feedback"></p>
+        <button onclick="checkAnswer(1, 'A')">A) Ma meilleure ennemie - Stromae ft Pomme</button>
+        <button onclick="checkAnswer(1, 'B')">B) All about that bass - Meghan Trainor</button>
+        <button onclick="checkAnswer(1, 'C')">C) One call away - Charlie Puth</button>
+        <p id="result1"></p>
 
         <h3>2) What show do we looove to watch together?</h3>
-        <button onclick="checkAnswer(this, 'D')">D) All</button>
-        <button onclick="checkAnswer(this, 'A')">A) House</button>
-        <button onclick="checkAnswer(this, 'B')">B) Arcane</button>
-        <button onclick="checkAnswer(this, 'C')">C) Final Space</button>
-        <p class="feedback"></p>
+        <button onclick="checkAnswer(2, 'A')">A) House</button>
+        <button onclick="checkAnswer(2, 'B')">B) Arcane</button>
+        <button onclick="checkAnswer(2, 'C')">C) Final Space</button>
+        <button onclick="checkAnswer(2, 'D')">D) All</button>
+        <p id="result2"></p>
 
         <button onclick="hideQuiz()">Close</button>
     </div>
 
-    <script>
-        function showLetter() {
-            document.getElementById("letterPopup").style.display = "block";
-        }
+    <script src="script.js"></script>
 
-        function hideLetter() {
-            document.getElementById("letterPopup").style.display = "none";
-        }
-
-        function showQuiz() {
-            document.getElementById("quizSection").classList.remove("hidden");
-        }
-
-        function hideQuiz() {
-            document.getElementById("quizSection").classList.add("hidden");
-        }
-
-        function checkAnswer(button, correctAnswer) {
-            let feedback = button.parentElement.querySelector(".feedback");
-
-            if (button.innerText.startsWith(correctAnswer)) {
-                feedback.innerText = "Hehe well done! 💗";
-                feedback.style.color = "green";
-                showConfetti();  // Trigger confetti effect on correct answer
-            } else {
-                feedback.innerText = "Wrong! Maybe next one! <33";
-                feedback.style.color = "red";
-            }
-        }
-
-        // Floating Hearts
-        document.body.addEventListener("click", function(event) {
-            let heart = document.createElement("div");
-            heart.classList.add("heart");
-            heart.textContent = "💖";
-            heart.style.left = `${event.pageX - 15}px`;
-            heart.style.bottom = `${event.pageY - 15}px`;
-
-            document.getElementById("hearts").appendChild(heart);
-
-            setTimeout(function() {
-                heart.remove();
-            }, 3000);
-        });
-
-        // Trigger Confetti when quiz is completed
-        function showConfetti() {
-            const confettiContainer = document.createElement("div");
-            confettiContainer.classList.add("confetti");
-            document.body.appendChild(confettiContainer);
-
-            for (let i = 0; i < 30; i++) {
-                let confettiPiece = document.createElement("span");
-                confettiPiece.style.left = `${Math.random() * 100}%`;
-                confettiPiece.style.animationDelay = `${Math.random() * 2}s`;
-                confettiContainer.appendChild(confettiPiece);
-            }
-
-            setTimeout(function() {
-                confettiContainer.remove();
-            }, 5000); // Remove confetti after 5 seconds
-        }
-    </script>
-
-    <!-- Floating Hearts Container -->
-    <div id="hearts"></div>
 </body>
 </html>

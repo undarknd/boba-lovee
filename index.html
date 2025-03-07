@@ -16,28 +16,30 @@
     <h2>YOUUU ARE MY UNIIVERSEEEE 💗</h2>
     <p>Just wanted to tell you how much I lOOOve YOUU! 💖</p>
 
-    <!-- Clickable Letter to Open Love Note -->
-    <div class="pixel-letter" onclick="showLetter()">
-        <img src="http://dl9.glitter-graphics.net/pub/536/536379ct59sbi3yr.gif" width="46" height="40" alt="Love Letter GIF">
+    <!-- Clickable Love Book to Open Love Note -->
+    <div class="pixel-book" onclick="showLetter()">
+        <img src="http://dl9.glitter-graphics.net/pub/536/536379ct59sbi3yr.gif" width="46" height="40" alt="Love Book">
     </div>
 
     <!-- Love Letter (Initially Hidden) -->
     <div id="letter" class="letter">
         <p>
-            Dear bobo,
+            Dear bobo,  
             <br><br>
-            I just wanted to say that I love you and appreciate everything you do 🩷 You work so hard for me always and give me the best. You’re the prettiest and bestest bobo ever and I’m so lucky and grateful to have such a loving husband by my side💗
+            I just wanted to say that I love you and appreciate everything you do 🩷 You work so hard for me always and give me the best. 
+            You’re the prettiest and bestest bobo ever and I’m so lucky and grateful to have such a loving husband by my side💗  
+            You mean every thing to me. You mean the whole world and more. You are my moon and sun and solar system and every thing combined.  
+            My life is better when I’m with you and I enjoy every day of my life when I’m with you. You make me so happy,  
+            and I would be one sad boba tea 🧋 without you.  
             <br><br>
-            You mean everything to me. You mean the whole world and more. You are my moon and sun and solar system and everything combined. My life is better when I’m with you and I enjoy every day of my life when I’m with you. You make me so happy, and I would be one sad boba tea 🧋 without you. 
-            <br><br>
-            **I LOVE YOU SOOOOOOO MUUUCHH!!** 💖
+            **I LOVE YOU SOOOOOOO MUUUUCHH!!** 💖
         </p>
         <button onclick="hideLetter()">Close</button>
     </div>
 
-    <!-- Clickable Question Mark GIF to Open Quiz -->
-    <div class="pixel-book" onclick="showQuiz()">
-        <img src="http://dl5.glitter-graphics.net/pub/1132/1132735gc04wawhhy.gif" width="29" height="45" alt="Question Mark GIF">
+    <!-- Clickable Question Mark to Open Quiz -->
+    <div class="pixel-question-mark" onclick="showQuiz()">
+        <img src="http://dl5.glitter-graphics.net/pub/1132/1132735gc04wawhhy.gif" width="29" height="45" alt="Question Mark">
     </div>
 
     <!-- Quiz Section (Initially Hidden) -->
@@ -61,7 +63,6 @@
     </div>
 
     <script>
-        // Functions to show/hide the love letter
         function showLetter() {
             document.getElementById("letter").style.display = "block";
         }
@@ -70,7 +71,6 @@
             document.getElementById("letter").style.display = "none";
         }
 
-        // Functions to show/hide the quiz
         function showQuiz() {
             document.getElementById("quiz").style.display = "block";
         }
@@ -79,7 +79,6 @@
             document.getElementById("quiz").style.display = "none";
         }
 
-        // Function to check quiz answers
         function checkAnswer(question, answer) {
             if (question === 1) {
                 if (answer === 'A') {

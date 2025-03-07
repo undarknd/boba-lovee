@@ -18,7 +18,7 @@
 
     <!-- Clickable Letter to Open Love Note -->
     <div class="pixel-letter" onclick="showLetter()">
-        <img src="http://dl9.glitter-graphics.net/pub/536/536379ct59sbi3yr.gif" width="46" height="40" alt="Letter Icon">
+        <img src="http://dl9.glitter-graphics.net/pub/536/536379ct59sbi3yr.gif" width="46" height="40" alt="Love Letter GIF">
     </div>
 
     <!-- Love Letter (Initially Hidden) -->
@@ -26,18 +26,22 @@
         <p>
             Dear bobo,
             <br><br>
-            I just wanted to say that I love you so much 💖
+            I just wanted to say that I love you and appreciate everything you do 🩷 You work so hard for me always and give me the best. You’re the prettiest and bestest bobo ever and I’m so lucky and grateful to have such a loving husband by my side💗
+            <br><br>
+            You mean everything to me. You mean the whole world and more. You are my moon and sun and solar system and everything combined. My life is better when I’m with you and I enjoy every day of my life when I’m with you. You make me so happy, and I would be one sad boba tea 🧋 without you. 
+            <br><br>
+            **I LOVE YOU SOOOOOOO MUUUCHH!!** 💖
         </p>
         <button onclick="hideLetter()">Close</button>
     </div>
 
-    <!-- Clickable Question Mark GIF for the Quiz -->
-    <div class="pixel-question-mark" onclick="showQuiz()">
-        <img src="http://dl5.glitter-graphics.net/pub/1132/1132735gc04wawhhy.gif" width="29" height="45" alt="Question Mark">
+    <!-- Clickable Question Mark GIF to Open Quiz -->
+    <div class="pixel-book" onclick="showQuiz()">
+        <img src="http://dl5.glitter-graphics.net/pub/1132/1132735gc04wawhhy.gif" width="29" height="45" alt="Question Mark GIF">
     </div>
 
     <!-- Quiz Section (Initially Hidden) -->
-    <div id="quizSection" class="quiz hidden">
+    <div id="quiz" class="quiz">
         <p>Now enjoy some quizzes with me :3</p>
 
         <h3>1) What song do we both lOoooVEEee?</h3>
@@ -56,7 +60,42 @@
         <button onclick="hideQuiz()">Close</button>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Functions to show/hide the love letter
+        function showLetter() {
+            document.getElementById("letter").style.display = "block";
+        }
+
+        function hideLetter() {
+            document.getElementById("letter").style.display = "none";
+        }
+
+        // Functions to show/hide the quiz
+        function showQuiz() {
+            document.getElementById("quiz").style.display = "block";
+        }
+
+        function hideQuiz() {
+            document.getElementById("quiz").style.display = "none";
+        }
+
+        // Function to check quiz answers
+        function checkAnswer(question, answer) {
+            if (question === 1) {
+                if (answer === 'A') {
+                    document.getElementById("result1").innerText = "Hehe dat was an easy one! well done 💗";
+                } else {
+                    document.getElementById("result1").innerText = "Wrong! Maybe next one! <33";
+                }
+            } else if (question === 2) {
+                if (answer === 'D') {
+                    document.getElementById("result2").innerText = "Hehe! Well done boba!💗";
+                } else {
+                    document.getElementById("result2").innerText = "Wrong hehe! All of them :)";
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
